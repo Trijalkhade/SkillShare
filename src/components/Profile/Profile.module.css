@@ -1,0 +1,135 @@
+.header {
+    display: flex;
+    margin-bottom: 44px;
+    align-items: center;
+}
+
+.avatarContainer {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    margin-right: 30px;
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--border-color);
+}
+
+.info {
+    flex-grow: 2;
+}
+
+.topRow {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.username {
+    font-size: 28px;
+    font-weight: 300;
+}
+
+.settingsGroup {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.stats {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.statCount {
+    font-weight: 600;
+}
+
+.bio {
+    font-size: 16px;
+}
+
+.fullName {
+    font-weight: 600;
+    display: block;
+}
+
+.settingsBtn {
+    border: 1px solid var(--border-color);
+    background: transparent;
+    padding: 5px 9px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.gridItem {
+    position: relative;
+    aspect-ratio: 1;
+    background-color: #efefef;
+    cursor: pointer;
+}
+
+.gridImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.noPosts {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 40px;
+    color: var(--text-secondary);
+    border: 1px dashed var(--border-color);
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.placeholderIcon {
+    font-size: 48px;
+    color: var(--border-color);
+}
+
+@media (max-width: 735px) {
+    .header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .avatarContainer {
+        margin-right: 0;
+    }
+
+    .avatar {
+        width: 77px;
+        height: 77px;
+    }
+
+    .topRow {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .grid {
+        gap: 3px;
+    }
+}
